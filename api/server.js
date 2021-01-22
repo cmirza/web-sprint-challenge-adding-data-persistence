@@ -12,4 +12,8 @@ server.use('/api/projects', projectRouter);
 server.use('/api/resources', resourceRouter);
 server.use('/api/tasks', taskRouter);
 
+server.get("/", (req, res) => {
+    res.status(200).json({ message: "running" });
+});
+
 module.exports = server;
