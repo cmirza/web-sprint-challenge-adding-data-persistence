@@ -106,6 +106,17 @@ There are two possible ways to submit this project to Canvas. Lambda Staff will 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between Relational Databases and SQL.
+
+  - A relational database is a database that stores data in tables that can be related to one another. SQL is a query language that is used to talk to the database.
+
 2. Why do tables need a Primary Key?
+
+  - Primary keys are how we uniquely identify records within a table.
+
 3. What is the name given to a table column that references the Primary Key on another table?
+
+  - A foreign key.
+
 4. What do we need in order to have a _many to many_ relationship between two tables?
+
+  - We need an intermediary table that will reference the data on the two tables.
