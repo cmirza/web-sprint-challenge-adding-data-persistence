@@ -6,6 +6,9 @@ const Projects = require('./model');
 router.get('/', async (req, res) => {
     try {
         const projects = await Projects.find();
+        projects.forEach(project => {
+            project.project_completed = !!project.project_completed;
+        });
         res.status(200).json(projects);
     } catch (error) {
         res.status(500).json({ errorMessage: error.message });
@@ -25,6 +28,7 @@ router.post('/', async (req, res) => {
     try {
         const [projectId] = await Projects.add(req.body);
         const project = await Projects.findById(projectId);
+        project.project_completed = !!project.project_completed;
         res.status(201).json(project)
     } catch (error) {
         res.status(500).json({ errorMessage: error.message });
