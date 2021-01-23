@@ -27,6 +27,7 @@ exports.up = function(knex) {
                 .notNullable()
                 .defaultTo(false)
             table.integer('project_id')
+                .notNullable()
                 .references('id')
                 .inTable('projects')
         })
